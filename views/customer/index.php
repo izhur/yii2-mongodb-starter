@@ -10,26 +10,37 @@ use yii\widgets\Pjax;
 $this->title = 'Customers';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
 <div class="customer-index">
+<div class="row">
+    <div class="col-xs-12">
+        <div class="box">
+            <div class="box-header">
+              <h3 class="box-title"><?= Html::encode($this->title) ?> Data management</h3>
+              <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+            </div>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+            <div class="box-body">
+            <p>
+                <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
+            </p>
+            <?php Pjax::begin(); ?>    <?= GridView::widget([
+                    'dataProvider' => $dataProvider,
+                    'filterModel' => $searchModel,
+                    'columns' => [
+                        ['class' => 'yii\grid\SerialColumn'],
 
-    <p>
-        <?= Html::a('Create Customer', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-<?php Pjax::begin(); ?>    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+                        '_id',
+                        'name',
+                        'email',
+                        'address',
 
-            '_id',
-            'name',
-            'email',
-            'address',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-<?php Pjax::end(); ?></div>
+                        ['class' => 'yii\grid\ActionColumn'],
+                    ],
+                ]); ?>
+            <?php Pjax::end(); ?>
+            </div><!-- .box-body -->
+        </div><!-- .box -->
+    </div><!-- .col-xs-12 -->
+</div><!-- .row -->
+</div>

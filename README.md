@@ -157,6 +157,8 @@ Features:
   ./yii mongodb-migrate up
 - Penggunaan module
   contoh di api module
-- Penggunaan RESTful Webservice,
+- Penggunaan RESTful Webservice, XML, JSON
   yang telah di custom agar compatible dengan mongodb data.
   contoh di api module http://localhost:8080/api/customer
+- Penggunaan theme adminLTE
+  
