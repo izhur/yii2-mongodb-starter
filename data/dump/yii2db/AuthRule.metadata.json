@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":1,"key":{"_id":1},"name":"_id_","ns":"yii2db.AuthRule"},{"v":1,"unique":true,"key":{"name":{"$numberLong":"1"}},"name":"name_1","ns":"yii2db.AuthRule","w":{"$numberLong":"1"}}]}
