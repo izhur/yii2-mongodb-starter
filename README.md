@@ -105,6 +105,7 @@ return [
 Dependencies:
 - composer
 - git
+- mongodb
 
 Installasi:
 
@@ -112,6 +113,17 @@ Installasi:
 > cd yii2-basic
 > composer install
 
+export database
+> cd yii2-basic/data
+> mongodump --db yii2db --host=127.0.0.1
+
+import database
+> cd yii2-basic/data
+> mongorestore --db yii2db --host=127.0.0.1 dump/
+
+exceute migrate
+> cd yii2-basic
+> ./yii mongodb-migrate up
 
 Features:
 
