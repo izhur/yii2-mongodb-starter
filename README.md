@@ -1,4 +1,4 @@
-Yii 2 Basic Project Template
+Yii 2 Basic Project Starter App
 ============================
 
 Yii 2 Basic Project Template is a skeleton [Yii 2](http://www.yiiframework.com/) application best for
@@ -101,6 +101,22 @@ return [
 - Check and edit the other files in the `config/` directory to customize your application as required.
 - Refer to the README in the `tests` directory for information specific to basic application tests.
 
+This yii2 starter application, are bundled with some project to easily get start and run, creating basic 
+yii2 application that used:
+  - mongodb backed database
+    - "yiisoft/yii2-mongodb": "^2.0"
+    - "mongofill/mongofill": "dev-master"
+  - role based access controll example
+    - "letyii/yii2-rbac-mongodb": "dev-master",
+    - "mdmsoft/yii2-admin": "2.x-dev",
+  - using theme admin-LTE, and how to integrate with the application
+    - "dmstr/yii2-adminlte-asset": "2.*"
+  - with some example of used, model behaviours
+  - model rule validation example
+  - gii generator that has added mongodb collection generator
+  - example of swiftmailer for create and send email
+  - example configuration for RESTful webservice, and how to custom for mongodb ActiveRecord
+  - yii migration for mongodb example 
 
 Dependencies:
 - composer
