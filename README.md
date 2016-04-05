@@ -125,6 +125,13 @@ exceute migrate
 > cd yii2-basic
 > ./yii mongodb-migrate up
 
+run server
+> cd yii2-basic
+> php yii serve
+atau
+> ./yii serve
+akses di browser dengan alamat http://localhost:8080
+
 Features:
 
 - User 
@@ -161,4 +168,3 @@ Features:
   yang telah di custom agar compatible dengan mongodb data.
   contoh di api module http://localhost:8080/api/customer
 - Penggunaan theme adminLTE
-  
