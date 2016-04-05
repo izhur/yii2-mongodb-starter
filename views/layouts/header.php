@@ -226,11 +226,11 @@ use yii\helpers\Html;
                     </ul>
                 </li>
                 <!-- User Account: style can be found in dropdown.less -->
-
+                <?php if (!Yii::$app->user->isGuest) { ?>
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="user-image" alt="User Image"/>
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <span class="hidden-xs"><?php echo Yii::$app->user->identity->username; ?></span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
@@ -239,7 +239,7 @@ use yii\helpers\Html;
                                  alt="User Image"/>
 
                             <p>
-                                Alexander Pierce - Web Developer
+                                <?php echo Yii::$app->user->identity->username; ?>
                                 <small>Member since Nov. 2012</small>
                             </p>
                         </li>
@@ -270,6 +270,7 @@ use yii\helpers\Html;
                         </li>
                     </ul>
                 </li>
+                <?php } ?>
 
                 <!-- User Account: style can be found in dropdown.less -->
                 <li>
